@@ -19,7 +19,7 @@ export const HeroSection = () => {
         }}></div>
         {/* stars */}
         <div className='absolute inset-0 -z-30 opacity-10' style={{
-          backgroundImage: `url(${starImage.src})`,WebkitMaskImage: 'radial-gradient(circle, transparent 25%, black 30%)',maskImage: 'radial-gradient(circle, transparent 50%, black 50%)',
+          backgroundImage: `url(${starImage.src})`,WebkitMaskImage: 'radial-gradient(circle,transparent 25%, black 30%)',maskImage: 'radial-gradient(circle, transparent 25%, black 30%)',
         }}></div>
 
         {/* Rings */}

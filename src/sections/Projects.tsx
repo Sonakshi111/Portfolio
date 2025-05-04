@@ -17,7 +17,7 @@ const portfolioProjects = [
     image: HeartDiseasePred,
   },
   {
-    title: "Anime Searching Website",
+    title: "Anime Searching Webpage",
     results: [
       { title: "Built anime-themed website with HTML, CSS, JS" },
       { title: "Responsive layout with sliding image feature" },
