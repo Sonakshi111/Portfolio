@@ -19,7 +19,7 @@ export const HeroSection = () => {
         }}></div>
         {/* stars */}
         <div className='absolute inset-0 -z-30 opacity-10' style={{
-          backgroundImage: `url(${starImage.src})`,WebkitMaskImage: 'radial-gradient(circle, transparent 25%, black 25%)',maskImage: 'radial-gradient(circle, transparent 50%, black 50%)',
+          backgroundImage: `url(${starImage.src})`,WebkitMaskImage: 'radial-gradient(circle, transparent 25%, black 30%)',maskImage: 'radial-gradient(circle, transparent 50%, black 50%)',
         }}></div>
 
         {/* Rings */}
@@ -46,7 +46,7 @@ export const HeroSection = () => {
         <div className="max-w-lg mx-auto">
           {/* Heading */}
           <p className='mt-4 text-center text-white/75 md:text-lg'>Hello, I'm</p>
-          <h1 className='text-center text-3xl md:text-5xl font-serif mt-3 tracking-wide'>Sonakshi Yadav</h1>
+          <h1 className='text-center text-3xl md:text-5xl font-serif mt-3 tracking-wide font-semibold'>Sonakshi <span className='text-blue-300 '>Yadav</span></h1>
 
           {/* Para */}
           <p className='mt-4 text-center text-white/75 md:text-lg'>An enthusiastic frontend developer, open to all professional projects which brings user's imagination into real by building user friendly and unique experiences </p>

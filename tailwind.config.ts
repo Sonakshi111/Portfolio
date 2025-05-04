@@ -24,7 +24,6 @@ const config: Config = {
       fontfamily:{
         sans: 'var(--font-sans)',
         serif: 'var(--font-serif)',
-        
       }
     },
   },
