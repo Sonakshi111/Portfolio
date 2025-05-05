@@ -1,6 +1,6 @@
 import HeartDiseasePred from "@/assets/images/heart-Disease-pred.png";
 import AnimeWebiste from "@/assets/images/Anime-website.png";
-import aiStartupLandingPage from "@/assets/images/ai-startup-landing-page.png";
+// import TITLE from "@/assets/images/IMAGE";
 import Image from "next/image";
 import CheckIcon from '@/assets/icons/check-circle.svg';
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
@@ -31,14 +31,14 @@ const portfolioProjects = [
 
 
   // {
-  //   title: "AI Startup Landing Page",
+  //   title: "",
   //   results: [
-  //     { title: "Enhanced user experience by 40%" },
-  //     { title: "Improved site speed by 50%" },
-  //     { title: "Increased mobile traffic by 35%" },
+  //     { title: "" },
+  //     { title: "" },
+  //     { title: "" },
   //   ],
-  //   link: "https://youtu.be/Z7I5uSRHMHg",
-  //   image: aiStartupLandingPage,
+  //   link: "",
+  //   image: ,
   // },
 ];
 
