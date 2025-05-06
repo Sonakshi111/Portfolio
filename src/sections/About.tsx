@@ -1,5 +1,6 @@
 
-import { SectionHeader } from "@/components/sectionheader";
+import { SectionHeader } from "@/components/SectionHeader";
+import { ToolboxItems } from "@/components/ToolboxItems";
 import HTMLIcon from "@/assets/icons/html5.svg";
 import JavaScriptIcon from "@/assets/icons/square-js.svg";
 import ReactIcon from "@/assets/icons/react.svg";
@@ -7,6 +8,9 @@ import CSSIcon from "@/assets/icons/css3.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import PythonIcon from "@/assets/icons/logo-python.svg";
 import { TechIcon } from "@/components/TechIcon";
+import StarIcon from "@/assets/icons/star.svg";
+import grainImage from "@/assets/images/grain.jpg";
+import starImage from "@/assets/images/starry-night.jpg";
 
 
 
@@ -40,64 +44,107 @@ const toolboxItems = [
 const hobbies = [
   {
     title: 'Painting',
-    emoji: '🎨'
+    emoji: '🎨',
+    left: "5%",
+    top: '5%',
   },
   {
     title: 'Reading',
-    emoji: '📖'
+    emoji: '📖',
+    left: "50%",
+    top: '15%',
   },
   {
     title: 'Music',
-    emoji: '🎶'
+    emoji: '🎶',
+    left: "15%",
+    top: '35%',
   },
   {
     title: 'Travel',
-    emoji: '🧳'
+    emoji: '🧳',
+    left: "60%",
+    top: '40%',
   },
   {
     title: 'Badminton',
-    emoji: '🏸'
+    emoji: '🏸',
+    left: "5%",
+    top: '65%',
   },
   {
     title: 'Craft',
-    emoji: '✂️'
+    emoji: '✂️',
+    left: "45%",
+    top: '75%',
   },
 ]
 
 export const AboutSection = () => {
   return (
-    <div className="py-20">
+    <div className="py-20 lg:py-28">
+
       <div className="container">
+
         <SectionHeader eyebrow="About Me" title="A Glimpse into my world" description="Learn more about who I am, what I do and what inspires me." />
-        <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none px-8 pt-4 mt-20 md:pt-12 md:px-10 lg:pt-16 lg:px-20 ">
-          <h3>My ToolBox</h3>
-          <p>Explore the technologies ans tools I use</p>
 
-          <div>
-            {toolboxItems.map(item => (
-              <div key={item.title}>
-                <TechIcon component={item.iconType} />
-                <span>{item.title}</span>
+        <div className=" md:grid md:grid-cols-2 md:gap-8">
+
+          <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none p-0 pt-4  md:pt-6 md:mt-20 lg:mt-28">
+
+            {/* <div className="h-[320px]"> */}
+
+
+            <div className="flex flex-col px-8">
+              <div className="inline-flex items-center gap-2">
+                <StarIcon className="size-8 text-emerald-300" />
+                <h3 className="font-serif text-3xl">My ToolBox</h3>
               </div>
-            ))}
+              <p className="text-sm text-white/60 mt-2 lg:text-lg">Explore the technologies and tools I use</p>
+
+            </div>
+            <div className="h-[200px] lg:mt-8 ">
+              <ToolboxItems items={toolboxItems} className="mt-6" />
+              <ToolboxItems
+                items={toolboxItems}
+                className="mt-6 lg:mt-8"
+                itemsWrapperClassName="-translate-x-3/4 lg:-translate-x-1/2"/>
+            </div>
+
+          </div>
+          {/* </div> */}
+
+          <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none p-0 md:pt-6 mt-20 lg:mt-28">
+
+            {/* <div className="h-[320px]"> */}
+            <div className="px-8 py-4 md:py-0 lg:py-0">
+
+
+              <div className="inline-flex items-center gap-2 ">
+                <StarIcon className="size-8 text-emerald-300" />
+                <h3 className="font-serif text-3xl">Beyond the code</h3>
+              </div>
+              <p className="text-sm text-white/60 mt-2 lg:text-base">Explore my interests and hobbies beyond the digital domain</p>
+            </div>
+            <div className="flex flex-col relative h-[200px] lg:h-[240px] pt-4 lg:mt-2">
+              {hobbies.map(hobby => (
+                <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                  style={{
+                    left: hobby.left,
+                    top: hobby.top,
+                  }}>
+                  <span className="font-medium text-gray-950">{hobby.title}</span>
+                  <span>{hobby.emoji}</span>
+                </div>
+              ))}
+            </div>
+
+
+            {/* </div> */}
+
           </div>
         </div>
-
-
-        <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none px-8 pt-4 mt-20 md:pt-12 md:px-10 lg:pt-16 lg:px-20 ">
-          <h3>Beyond the code</h3>
-          <p>Explore my interests and hobbies beyond the digital domain</p>
-          <div>
-            {hobbies.map(hobby => (
-              <div key={hobby.title}>
-                <span>{hobby.title}</span>
-                <span>{hobby.emoji}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-
       </div>
-
-    </div>);
+    </div>
+  );
 };
