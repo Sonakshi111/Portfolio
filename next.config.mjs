@@ -43,6 +43,9 @@ const nextConfig = {
 
     return config;
   },
+
+  //Enable static export
+  output:'export',
 };
 
 export default nextConfig;
