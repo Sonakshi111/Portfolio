@@ -44,7 +44,7 @@ const portfolioProjects = [
 
 export const ProjectsSection = () => {
   return (
-    <section className="pb-16 lg:py-24">
+    <section id="project"className="pb-16 lg:py-24">
       <div className="container">
         <div className="flex justify-center">
           <p className="uppercase font-semibold tracking-widest bg-gradient-to-r from-emerald-300 to-sky-400 text-transparent bg-clip-text text-center">Real World Results</p>
@@ -55,9 +55,9 @@ export const ProjectsSection = () => {
 
         <div className=" mt-10 md:mt-20 lg:mt-30 flex flex-col gap-20 ">
           {portfolioProjects.map(project => (
-            <div key={project.title} className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:-z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none">
+            <div key={project.title} className="bg-gray-800 rounded-3xl  z-0 overflow-hidden after:-z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 px-8 pt-8 md:pt-12 md:px-10 lg:pt-16 lg:px-20 after:pointer-events-none sticky top-16">
 
-              <div className="lg:grid lg:grid-cols-2 lg:gap-16">
+              <div className="lg:grid lg:grid-cols-2 lg:gap-16 ">
                 <div className="lg:pb-16">
                   <div className="flex">
                     <h3 className="font-serif text-2xl mt-2 md:mt-5 md:text-4xl lg:text-5xl font-semibold tracking-widest bg-gradient-to-r from-blue-300 to-red-400 text-transparent bg-clip-text">{project.title}</h3>

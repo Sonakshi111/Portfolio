@@ -1,4 +1,4 @@
-
+'use client';
 import { SectionHeader } from "@/components/SectionHeader";
 import { ToolboxItems } from "@/components/ToolboxItems";
 import HTMLIcon from "@/assets/icons/html5.svg";
@@ -7,11 +7,9 @@ import ReactIcon from "@/assets/icons/react.svg";
 import CSSIcon from "@/assets/icons/css3.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import PythonIcon from "@/assets/icons/logo-python.svg";
-import { TechIcon } from "@/components/TechIcon";
 import StarIcon from "@/assets/icons/star.svg";
-import grainImage from "@/assets/images/grain.jpg";
-import starImage from "@/assets/images/starry-night.jpg";
-
+import { motion } from "framer-motion";
+import { useRef } from "react";
 
 
 const toolboxItems = [
@@ -81,8 +79,9 @@ const hobbies = [
 ]
 
 export const AboutSection = () => {
+  const constraintRef =useRef(null);
   return (
-    <div className="py-20 lg:py-28">
+    <div id="about" className="py-20 lg:py-28">
 
       <div className="container">
 
@@ -103,20 +102,18 @@ export const AboutSection = () => {
               <p className="text-sm text-white/60 mt-2 lg:text-lg">Explore the technologies and tools I use</p>
 
             </div>
-            <div className="h-[200px] lg:mt-8 ">
-              <ToolboxItems items={toolboxItems} className="mt-6" />
+            <div className="h-[200px] lg:mt-8 overflow-x-hidden relative ">
+              <ToolboxItems items={toolboxItems} className="mt-6" itemsWrapperClassName="animate-move-left [animation-duration:20s]" />
               <ToolboxItems
                 items={toolboxItems}
-                className="mt-6 lg:mt-8"
-                itemsWrapperClassName="-translate-x-3/4 lg:-translate-x-1/2"/>
+                className="mt-6 lg:mt-8 "
+                itemsWrapperClassName="animate-move-right [animation-duration:20s]"/>
             </div>
 
           </div>
-          {/* </div> */}
 
           <div className="bg-gray-800 rounded-3xl relative z-0 overflow-hidden after:z-10 after:content-[''] after:absolute after:inset-0 after:outline-2 after:outline after:-outline-offset-2 after:rounded-3xl after:outline-white/20 after:pointer-events-none p-0 md:pt-6 mt-20 lg:mt-28">
 
-            {/* <div className="h-[320px]"> */}
             <div className="px-8 py-4 md:py-0 lg:py-0">
 
 
@@ -124,23 +121,22 @@ export const AboutSection = () => {
                 <StarIcon className="size-8 text-emerald-300" />
                 <h3 className="font-serif text-3xl">Beyond the code</h3>
               </div>
-              <p className="text-sm text-white/60 mt-2 lg:text-base">Explore my interests and hobbies beyond the digital domain</p>
+              <p className="text-sm text-white/60 mt-2 lg:text-base">Explore my interests and hobbies beyond the digital domain <span className="text-rose-300">(you can drag icons)</span></p>
             </div>
-            <div className="flex flex-col relative h-[200px] lg:h-[240px] pt-4 lg:mt-2">
+            <div className="flex flex-col relative h-[200px] lg:h-[240px] pt-4 lg:mt-2" ref={constraintRef}>
               {hobbies.map(hobby => (
-                <div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
+                <motion.div key={hobby.title} className="inline-flex items-center gap-2 px-6 bg-gradient-to-r from-emerald-300 to-sky-400 rounded-full py-1.5 absolute"
                   style={{
                     left: hobby.left,
                     top: hobby.top,
-                  }}>
+                  }}
+                  drag
+                  dragConstraints={constraintRef}>
                   <span className="font-medium text-gray-950">{hobby.title}</span>
                   <span>{hobby.emoji}</span>
-                </div>
+                </motion.div>
               ))}
             </div>
-
-
-            {/* </div> */}
 
           </div>
         </div>

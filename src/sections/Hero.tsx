@@ -8,7 +8,7 @@ import starImage from "@/assets/images/starry-night.jpg";
 
 export const HeroSection = () => {
   return (
-    <div className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip pointer-events-none'>
+    <div id="home"className='py-32 md:py-48 lg:py-60 relative z-0 overflow-x-clip'>
       <div className='container'>
         <div className='absolute inset-0' style={{
           maskImage: 'linear-gradient(to bottom, transparent, black 10%, black 70%, transparent)',
@@ -38,7 +38,9 @@ export const HeroSection = () => {
             {/* Image */}
             <Image src={memoji} className="size-[75px] " alt="A person peeking behind a laptop" />
             <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 mt-1.5 inline-flex items-center gap-4 rounded-full'>
-              <div className='bg-green-500 size-2.5 rounded-full'></div>
+              <div className='bg-green-500 size-2.5 rounded-full relative'>
+                <div className="bg-green-500/45 absolute inset-0 rounded-full animate-ping-large"></div>
+              </div>
               <div className='text-sm font-medium'>
                 Available for new projects
               </div>
@@ -55,11 +57,11 @@ export const HeroSection = () => {
           </div>
 
           {/* Buttons */}
-          <div className='flex flex-col md:flex-row justify-center items-center mt-4 gap-3.5'>
+          <div className='flex flex-col md:flex-row justify-center items-center mt-4 gap-3.5 z-'>
 
             {/* Button 1 */}
             <button className='inline-flex items-center gap-2.5 border border-white/15 h-12 px-6 rounded-xl'>
-              <span className='font-semibold'>Explore my work</span>
+              <a href="#project"className='font-semibold z-10'>Explore my work</a>
               <ArrowDown className='size-4' /></button>
 
             {/* Button 2 */}
