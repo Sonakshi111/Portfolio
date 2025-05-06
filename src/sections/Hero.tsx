@@ -49,11 +49,11 @@ export const HeroSection = () => {
 
           <div className="max-w-lg mx-auto">
             {/* Heading */}
-            <p className='mt-4 text-center text-white/75 md:text-lg'>Hello, I'm</p>
+            <p className='mt-4 text-center text-white/75 md:text-lg'>Hello, I&rsquo;m</p>
             <h1 className='text-center text-3xl md:text-5xl font-serif mt-3 tracking-wide font-semibold'>Sonakshi <span className='text-blue-300 '>Yadav</span></h1>
 
             {/* Para */}
-            <p className='mt-4 text-center text-white/75 md:text-lg'>An enthusiastic frontend developer, open to all professional projects which brings user's imagination into real by building user friendly and unique experiences </p>
+            <p className='mt-4 text-center text-white/75 md:text-lg'>An enthusiastic frontend developer, open to all professional projects which brings user&rsquo;s imagination into real by building user friendly and unique experiences </p>
           </div>
 
           {/* Buttons */}
@@ -67,7 +67,7 @@ export const HeroSection = () => {
             {/* Button 2 */}
             <button className='inline-flex text-black bg-white px-3 py-2 rounded-lg'>
               <span>👋</span>
-              <span className='font-semibold'>Let's Connect</span></button>
+              <span className='font-semibold'>Let&rsquo;s Connect</span></button>
           </div>
 
         </div>

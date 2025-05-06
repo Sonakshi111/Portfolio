@@ -6,9 +6,9 @@ export const ContactSection = () => {
       <div className="bg-gradient-to-r from-emerald-300 to-sky-400 text-gray-900 py-8 px-10 rounded-3xl text-center md:text-left">
         <div className="flex flex-col md:flex-row gap-8 md:gap-16 items-center">
           <div>
-            <h2 className="font-serif text-2xl font-semibold md:text-3xl">Let's create something amazing together</h2>
+            <h2 className="font-serif text-2xl font-semibold md:text-3xl">Let&rsquo;s create something amazing together</h2>
             <p className="text-sm mt-2 md:text-base">
-              I'm always excited to learn and take on new challenges. Let's connect and see how I can help bring your project to life!
+              I&rsquo;m always excited to learn and take on new challenges. Let&rsquo;s connect and see how I can help bring your project to life!
             </p>
           </div>
           <div>
