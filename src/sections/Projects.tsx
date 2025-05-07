@@ -13,7 +13,7 @@ const portfolioProjects = [
       { title: "Built interactive UI with Streamlit" },
       { title: "Real-time results based on user input" },
     ],
-    link: "https://github.com/Sonakshi111/Heart-Disease-Prediction.git",
+    link: "https://heart-disease-prediction-model-usingml.streamlit.app/",
     image: HeartDiseasePred,
   },
   {
@@ -23,7 +23,7 @@ const portfolioProjects = [
       { title: "Responsive layout with sliding image feature" },
       { title: "Designed for visual appeal and interactivity" },
     ],
-    link: "https://github.com/Sonakshi111/Anime-website.git",
+    link: "https://sonakshi111.github.io/Anime-webpage/",
     image: AnimeWebiste,
   },
 
