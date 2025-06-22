@@ -6,7 +6,7 @@ export const Header = () => {
         <a href='#home' className="nav-item">Home</a>
         <a href='#project' className="nav-item">Project</a>
         <a href='#about' className="nav-item">About</a>
-        <a href="public/SResume.pdf" download className="nav-item bg-white text-gray-900 hover:bg-blue-400/70 hover:text-white-900">Download CV</a>
+        <a href="/SResume.pdf" download className="nav-item bg-white text-gray-900 hover:bg-blue-400/70 hover:text-white-900">Download CV</a>
       </nav>
     </div>
   );
